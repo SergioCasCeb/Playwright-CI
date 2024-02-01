@@ -74,6 +74,6 @@ module.exports = defineConfig({
     command: 'npm run serve',
     url: 'http://127.0.0.1:5100',
     reuseExistingServer: !process.env.CI,
-  },
+  }
 });
 
