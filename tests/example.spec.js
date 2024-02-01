@@ -1,8 +1,13 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
 
+//Open the playground app before any test is runned
+test.beforeEach(async ({ page }) => {
+  await page.goto('/')
+});
+
 test('has title', async ({ page }) => {
-  await page.goto('http://localhost:5100');
+  // await page.goto('http://localhost:5100');
 
   // Expect a title "to contain" a substring.
   await expect(page).toHaveTitle(/Test page/);
